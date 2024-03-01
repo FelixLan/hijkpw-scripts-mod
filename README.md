@@ -11,6 +11,16 @@ hostip去除版是将官方脚本的 hijk.art/host.php 网址进行剔除并换�
 脚本修改尚有不足，请不要将此脚本用于开发环境，感谢提供修改意见的群友，谢谢！
 
 ## V2ray
+```
+注意，脚本不适用最新版，原因是脚本在安装v2ray过程中，第822行默认从（https://github.com/v2fly/v2ray-core/releases/）抓取最新版本。解压后cp到对应位置，目前的最新版本为v5.1.0。该版本解压后，没有v2ctl文件，copy失败后，导致脚本意外终止，请作者予以修正。
+
+脚本未修正前的临时解决方法：
+wget https://raw.githubusercontent.com/daveleung/hijkpw-scripts-mod/main/v2ray_mod1.sh
+chmod a+x v2ray_mod1.sh
+vi v2ray_mod1.sh
+（将822行中的${NEW_VER}修改为v4.45.2）
+./v2ray_mod1.sh     
+```
 
 【3】V2ray带伪装一键脚本CentOS版
 
